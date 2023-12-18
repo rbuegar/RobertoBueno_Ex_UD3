@@ -120,7 +120,10 @@ public class Apuesta extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     *  Creacion de una nueva accion 
+     * @param evt Se crea un nuevo partido  
+     */
     private void bNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNuevoActionPerformed
         CrearPartido agregarpartido = new CrearPartido(this);
         agregarpartido.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
@@ -129,7 +132,10 @@ public class Apuesta extends javax.swing.JFrame {
         agregarpartido.setTitle("Agregar nuevo partido");
         agregarpartido.setVisible(Boolean.TRUE);
     }//GEN-LAST:event_bNuevoActionPerformed
-
+    /**
+     * Eliminar una accion ya creada
+     * @param evt Se elimina un partido añadido anteriormente
+     */
     private void bEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEliminarActionPerformed
         borrarPartido(listaQuiniela.getSelectedIndex());
     }//GEN-LAST:event_bEliminarActionPerformed
@@ -145,7 +151,10 @@ public class Apuesta extends javax.swing.JFrame {
     {
         return (int)Math.floor((Math.random()*(n2-n1+1) + n1));
     }
-    
+    /**
+     * Devuelve la accion dada anteriormente
+     * @param evt  Realiza la accion seleccionada por le usuario
+     */
     private void bRealizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRealizarActionPerformed
         DefaultListModel modeloquinielaresuelta = new DefaultListModel();
 
@@ -172,7 +181,10 @@ public class Apuesta extends javax.swing.JFrame {
         this.listaResultados.setModel(modeloquinielaresuelta);
     }//GEN-LAST:event_bRealizarActionPerformed
 
-    
+    /**
+     * 
+     * @param partido Crear un nuevo partido  
+     */
     public void partidoNuevo (String partido)
     {
         DefaultListModel modelonuevo = new DefaultListModel();
@@ -186,7 +198,10 @@ public class Apuesta extends javax.swing.JFrame {
         this.listaQuiniela.setModel(modelonuevo);
     }
     
-  
+    /**
+     * Utilizado para eliminar los partidos
+     * @param indice 
+     */
     public void borrarPartido(int indice)
     {
         DefaultListModel modelonuevoquiniela = new DefaultListModel();
