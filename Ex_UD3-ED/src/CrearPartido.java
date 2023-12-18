@@ -69,14 +69,20 @@ public class CrearPartido extends javax.swing.JFrame
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+/**
+ * Metodo utilizado para añadir un partido
+ * @param p se añade un nueevo partido
+ */
     public void añadePartido(String p)
     {
         v.añadePartido (p);
         tPartido.setText("");
         tPartido.requestFocus();
     }
-    
+    /**
+     * Metodo utilizar para agregar un partdio 
+     * @param evt Ejecucion de la accion
+     */
     private void bAgregarPartidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAgregarPartidoActionPerformed
         añadePartido(tPartido.getText());
     }//GEN-LAST:event_bAgregarPartidoActionPerformed
